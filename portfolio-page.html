@@ -1214,6 +1214,7 @@
       <div class="topbar">
         <div class="brand mono">FORM EXHIBIT 02</div>
         <nav aria-label="项目导航">
+          <a href="index.html">← 作品集</a>
           <a href="#context">定位</a>
           <a href="#form">形态</a>
           <a href="#detail">细节</a>
@@ -1229,7 +1230,7 @@
         <p class="hero-copy">这次重做不把它伪装成完整汽车品牌项目，而是借用暗色雕塑馆网页的语言，把跑车模型呈现为一次关于比例、曲面与视觉气质的产品形态研究。</p>
         <a class="outline-button" href="#context">查看项目</a>
       </div>
-      <div class="hero-count">0 / 6</div>
+      <div class="hero-count"><span id="hero-count-current">01</span> / <span id="hero-count-total">06</span></div>
     </header>
 
     <main>
@@ -1264,14 +1265,14 @@
 
       <section id="form">
         <div class="wide-image">
-          <img src="assets/sculptural-editorial/exhibition-overview.jpg" alt="跑车旧作升级的暗色展览图录页面">
+          <img loading="lazy" decoding="async" src="assets/sculptural-editorial/exhibition-overview.jpg" alt="跑车旧作升级的暗色展览图录页面">
         </div>
         <p class="caption">首页之后使用“展项说明”结构，把模型从单张渲染图转成可阅读的作品集叙事。</p>
       </section>
 
       <section class="split-feature">
         <figure>
-          <img src="assets/sculptural-editorial/source/01_three-quarter_studio.png" alt="高质感跑车三分之四视角">
+          <img loading="lazy" decoding="async" src="assets/sculptural-editorial/source/01_three-quarter_studio.png" alt="高质感跑车三分之四视角">
         </figure>
         <div class="feature-panel">
           <p class="eyebrow mono">form reading</p>
@@ -1283,7 +1284,7 @@
 
       <section>
         <figure>
-          <img src="assets/sculptural-editorial/proportion-study.jpg" alt="跑车侧面比例分析页面">
+          <img loading="lazy" decoding="async" src="assets/sculptural-editorial/proportion-study.jpg" alt="跑车侧面比例分析页面">
           <figcaption>比例页：用暖铜色细线标出轴距、视觉重心和座舱压缩关系，保留产品设计作品集需要的分析性。</figcaption>
         </figure>
       </section>
@@ -1311,7 +1312,7 @@
 
       <section>
         <figure>
-          <img src="assets/sculptural-editorial/detail-salon.jpg" alt="跑车模型局部细节展柜页面">
+          <img loading="lazy" decoding="async" src="assets/sculptural-editorial/detail-salon.jpg" alt="跑车模型局部细节展柜页面">
           <figcaption>局部细节展柜：四个区域分开，减少重叠，让部件层级更容易被面试官快速阅读。</figcaption>
         </figure>
       </section>
@@ -1325,15 +1326,15 @@
 
       <section class="grid-three">
         <figure>
-          <img src="assets/sculptural-editorial/source/02_front_closeup.png" alt="跑车前脸局部放大图">
+          <img loading="lazy" decoding="async" src="assets/sculptural-editorial/source/02_front_closeup.png" alt="跑车前脸局部放大图">
           <figcaption>前脸局部：灯组、进气口和折面语言。</figcaption>
         </figure>
         <figure>
-          <img src="assets/sculptural-editorial/source/13_rear_studio.png" alt="跑车尾部棚拍图">
+          <img loading="lazy" decoding="async" src="assets/sculptural-editorial/source/13_rear_studio.png" alt="跑车尾部棚拍图">
           <figcaption>尾部视角：尾灯、肩线和后体块关系。</figcaption>
         </figure>
         <figure>
-          <img src="assets/sculptural-editorial/source/15_top_shadow.png" alt="跑车俯视图">
+          <img loading="lazy" decoding="async" src="assets/sculptural-editorial/source/15_top_shadow.png" alt="跑车俯视图">
           <figcaption>俯视视角：座舱比例和车身宽度。</figcaption>
         </figure>
       </section>
@@ -1396,6 +1397,10 @@
       function setActiveChapter(id) {
         navLinks.forEach((link) => link.classList.toggle("is-active", link.getAttribute("href") === `#${id}`));
         chapterDots.forEach((dot) => dot.classList.toggle("is-active", dot.dataset.target === id));
+        const idx = chapters.findIndex((c) => c.id === id);
+        if (idx >= 0) {
+          document.getElementById("hero-count-current").textContent = String(idx + 1).padStart(2, "0");
+        }
       }
 
       const revealObserver = new IntersectionObserver((entries) => {
@@ -1440,6 +1445,10 @@
       const lightbox = document.querySelector(".lightbox");
       const lightboxImg = lightbox.querySelector("img");
       const lightboxCaption = lightbox.querySelector(".lightbox-caption");
+      const lightboxCount = document.createElement("span");
+      lightboxCount.className = "lightbox-count mono";
+      lightboxCount.style.cssText = "position:absolute;top:28px;left:28px;z-index:2;color:rgba(232,225,214,0.64);font-size:13px;";
+      lightbox.appendChild(lightboxCount);
       const closeButton = lightbox.querySelector(".lightbox-close");
       const prevButton = lightbox.querySelector(".lightbox-prev");
       const nextButton = lightbox.querySelector(".lightbox-next");
@@ -1450,12 +1459,15 @@
       }));
       let activeImage = 0;
 
+      document.getElementById("hero-count-total").textContent = String(gallery.length).padStart(2, "0");
+
       function openLightbox(index) {
         activeImage = index;
         const item = gallery[activeImage];
         lightboxImg.src = item.src;
         lightboxImg.alt = item.alt;
         lightboxCaption.textContent = item.caption;
+        lightboxCount.textContent = `${String(activeImage + 1).padStart(2, "0")} / ${String(gallery.length).padStart(2, "0")}`;
         lightbox.classList.add("is-open");
         lightbox.setAttribute("aria-hidden", "false");
         document.body.style.overflow = "hidden";
