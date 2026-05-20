@@ -1,17 +1,17 @@
 :root {
   --page-progress: 0;
-  --bg: #f5f5f5;
-  --bg-2: #ebebeb;
+  --bg: #ffffff;
+  --bg-2: #f0f0f0;
   --panel: #ffffff;
-  --panel-soft: rgba(255, 255, 255, 0.9);
-  --text: #1a1a1a;
-  --muted: #666666;
-  --quiet: #888888;
-  --accent: #1a1a1a;
-  --accent-soft: rgba(0, 0, 0, 0.10);
+  --panel-soft: rgba(255, 255, 255, 0.95);
+  --text: #000000;
+  --muted: #555555;
+  --quiet: #777777;
+  --accent: #000000;
+  --accent-soft: rgba(0, 0, 0, 0.08);
   --image-bg: #e8e8e8;
-  --line: rgba(0, 0, 0, 0.12);
-  --shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+  --line: rgba(0, 0, 0, 0.10);
+  --shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
   --radius: 4px;
   --radius-sm: 2px;
   --max: 1240px;
