@@ -413,7 +413,7 @@ p {
   z-index: 2;
   padding: var(--space-4) var(--space-5);
   border-top: 1px solid rgba(17, 16, 14, 0.12);
-  color: #5e5148;
+  color: var(--muted);
   font-size: 12px;
   font-weight: 800;
   letter-spacing: 1.2px;
@@ -1025,7 +1025,7 @@ p {
   position: absolute;
   inset: 38%;
   border-radius: 50%;
-  background: #12324a;
+  background: var(--accent);
 }
 
 .screen-block {
@@ -1661,7 +1661,7 @@ p {
     padding: var(--space-3);
     border: 1px solid rgba(0, 0, 0, 0.24);
     border-radius: var(--radius-sm);
-    color: #4e443d;
+    color: var(--muted);
     background: rgba(255, 255, 255, 0.38);
     opacity: 1;
     text-align: left;
@@ -1690,12 +1690,12 @@ p {
   }
 
   .hotspot-copy strong {
-    color: #2f2823;
+    color: var(--text);
     font-size: 14px;
   }
 
   .hotspot-copy small {
-    color: #5e5148;
+    color: var(--muted);
     font-size: 13px;
     line-height: 1.5;
   }
@@ -1858,7 +1858,7 @@ p {
     padding: var(--space-3);
     border: 1px solid rgba(0, 0, 0, 0.24);
     border-radius: var(--radius-sm);
-    color: #4e443d;
+    color: var(--muted);
     background: rgba(255, 255, 255, 0.38);
     opacity: 1;
     text-align: left;
@@ -1887,12 +1887,12 @@ p {
   }
 
   .hotspot-copy strong {
-    color: #2f2823;
+    color: var(--text);
     font-size: 14px;
   }
 
   .hotspot-copy small {
-    color: #5e5148;
+    color: var(--muted);
     font-size: 13px;
     line-height: 1.5;
   }
