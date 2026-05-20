@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" role="img" aria-label="Banannang imitation play study">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#241a15"/>
+      <stop offset="0.56" stop-color="#121211"/>
+      <stop offset="1" stop-color="#2d231d"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="48%" cy="28%" r="60%">
+      <stop offset="0" stop-color="#d0a15d" stop-opacity="0.26"/>
+      <stop offset="1" stop-color="#d0a15d" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#000000" flood-opacity="0.34"/>
+    </filter>
+  </defs>
+  <rect width="640" height="420" fill="url(#bg)"/>
+  <rect width="640" height="420" fill="url(#glow)"/>
+  <g opacity="0.14" stroke="#f4efe6" stroke-width="1">
+    <path d="M78 72h484M78 348h484M128 52v316M512 52v316"/>
+  </g>
+  <g filter="url(#shadow)">
+    <path d="M150 177c85 104 215 132 341 69 16-8 33 10 24 26-57 101-214 126-330 54-67-41-105-96-113-165-2-19 26-27 40-11l38 27z" fill="#e4aa54"/>
+    <path d="M137 149c94 114 229 144 365 82" fill="none" stroke="#f8d892" stroke-width="24" stroke-linecap="round"/>
+    <path d="M173 187c76 70 176 92 299 65" fill="none" stroke="#aa633f" stroke-width="7" stroke-linecap="round" opacity="0.44"/>
+    <path d="M263 243l-54 86h178l-52-87" fill="#f0d9cd"/>
+    <path d="M209 329c33 21 94 29 178 0" fill="none" stroke="#c57a55" stroke-width="6" stroke-linecap="round" opacity="0.68"/>
+  </g>
+  <g fill="none" stroke="#f4efe6" stroke-width="3" stroke-linecap="round" opacity="0.76">
+    <path d="M286 154c18 11 27 27 27 48"/>
+    <path d="M314 202c24-26 53-40 86-42"/>
+    <path d="M193 118c42-19 86-22 133-8"/>
+  </g>
+  <circle cx="313" cy="202" r="10" fill="#c57a55"/>
+</svg>

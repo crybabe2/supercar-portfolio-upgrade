@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" role="img" aria-label="Soappy reward mechanism study">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#201815"/>
+      <stop offset="0.52" stop-color="#111211"/>
+      <stop offset="1" stop-color="#2b211c"/>
+    </linearGradient>
+    <radialGradient id="aura" cx="72%" cy="32%" r="58%">
+      <stop offset="0" stop-color="#c57a55" stop-opacity="0.34"/>
+      <stop offset="1" stop-color="#c57a55" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#000000" flood-opacity="0.32"/>
+    </filter>
+  </defs>
+  <rect width="640" height="420" fill="url(#bg)"/>
+  <rect width="640" height="420" fill="url(#aura)"/>
+  <g opacity="0.14" stroke="#f4efe6" stroke-width="1">
+    <path d="M72 78h496M72 342h496M112 54v312M528 54v312"/>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="350" y="86" width="132" height="168" rx="28" fill="#e8c0ad"/>
+    <rect x="381" y="56" width="70" height="58" rx="16" fill="#f2d8ca"/>
+    <rect x="376" y="141" width="80" height="76" rx="16" fill="#2a2522"/>
+    <path d="M164 292c36-28 76-35 121-20 27 9 60 7 97-7 30-12 63 3 75 33 10 26-2 55-28 67-62 29-127 32-195 8-24-8-50-5-77 11-22 13-50 3-59-20-9-24 4-51 66-72z" fill="#f2d6c8"/>
+  </g>
+  <g fill="#c57a55">
+    <circle cx="416" cy="265" r="9"/>
+    <circle cx="386" cy="286" r="6"/>
+    <circle cx="450" cy="294" r="7"/>
+    <circle cx="418" cy="326" r="5"/>
+  </g>
+  <g fill="none" stroke="#f4efe6" stroke-width="3" stroke-linecap="round" opacity="0.78">
+    <path d="M260 259c34 22 79 25 134 8"/>
+    <path d="M152 315c43-22 83-27 121-15"/>
+    <path d="M394 173h44"/>
+    <path d="M399 191h34"/>
+  </g>
+  <path d="M505 112c30 32 43 72 39 120" fill="none" stroke="#c57a55" stroke-width="3" stroke-linecap="round" opacity="0.78"/>
+</svg>

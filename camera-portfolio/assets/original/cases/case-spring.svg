@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" role="img" aria-label="Spring social simulation study">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#231914"/>
+      <stop offset="0.52" stop-color="#111211"/>
+      <stop offset="1" stop-color="#2e231d"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="74%" cy="30%" r="62%">
+      <stop offset="0" stop-color="#c57a55" stop-opacity="0.31"/>
+      <stop offset="1" stop-color="#c57a55" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#000000" flood-opacity="0.34"/>
+    </filter>
+  </defs>
+  <rect width="640" height="420" fill="url(#bg)"/>
+  <rect width="640" height="420" fill="url(#glow)"/>
+  <g opacity="0.14" stroke="#f4efe6" stroke-width="1">
+    <path d="M76 78h488M76 342h488M126 54v312M514 54v312"/>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="151" y="238" width="114" height="82" rx="20" fill="#f1d4c5"/>
+    <rect x="375" y="238" width="114" height="82" rx="20" fill="#e7bca8"/>
+    <circle cx="208" cy="187" r="44" fill="#f1d4c5"/>
+    <circle cx="432" cy="187" r="44" fill="#e7bca8"/>
+    <path d="M264 194c38-28 75-28 112 0" fill="none" stroke="#c57a55" stroke-width="9" stroke-linecap="round"/>
+  </g>
+  <g fill="none" stroke="#f4efe6" stroke-width="4" stroke-linecap="round" opacity="0.76">
+    <path d="M190 170c12-11 25-11 38 0"/>
+    <path d="M416 170c12-11 25-11 38 0"/>
+    <path d="M251 114h112c23 0 42 19 42 42v15"/>
+    <path d="M236 122h-32c-32 0-58 26-58 58v25"/>
+  </g>
+  <g fill="#c57a55">
+    <circle cx="320" cy="193" r="11"/>
+    <circle cx="256" cy="114" r="7"/>
+    <circle cx="405" cy="171" r="7"/>
+  </g>
+  <g fill="none" stroke="#c57a55" stroke-width="3" opacity="0.78">
+    <rect x="288" y="258" width="64" height="44" rx="13"/>
+    <path d="M303 280h34"/>
+  </g>
+</svg>
