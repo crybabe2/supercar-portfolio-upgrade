@@ -1,19 +1,19 @@
 :root {
   --page-progress: 0;
-  --bg: #11100e;
-  --bg-2: #171411;
-  --panel: #211b17;
-  --panel-soft: rgba(33, 27, 23, 0.72);
-  --text: #f4efe6;
-  --muted: #b8aea3;
-  --quiet: #8e8277;
-  --accent: #c57a55;
-  --accent-soft: rgba(197, 122, 85, 0.45);
-  --image-bg: #f3eee6;
-  --line: rgba(197, 122, 85, 0.42);
-  --shadow: 0 28px 80px rgba(0, 0, 0, 0.36);
-  --radius: 10px;
-  --radius-sm: 6px;
+  --bg: #f5f5f5;
+  --bg-2: #ebebeb;
+  --panel: #ffffff;
+  --panel-soft: rgba(255, 255, 255, 0.9);
+  --text: #1a1a1a;
+  --muted: #666666;
+  --quiet: #888888;
+  --accent: #1a1a1a;
+  --accent-soft: rgba(0, 0, 0, 0.10);
+  --image-bg: #e8e8e8;
+  --line: rgba(0, 0, 0, 0.12);
+  --shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+  --radius: 4px;
+  --radius-sm: 2px;
   --max: 1240px;
   --space-1: 4px;
   --space-2: 8px;
@@ -37,9 +37,7 @@ html {
 body {
   margin: 0;
   color: var(--text);
-  background:
-    radial-gradient(circle at 76% 12%, rgba(197, 122, 85, 0.1), transparent 28rem),
-    linear-gradient(135deg, var(--bg), var(--bg-2) 46%, #0d0c0b);
+  background: var(--bg);
   font-family: Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
   letter-spacing: 0;
   overflow-x: hidden;
@@ -54,17 +52,6 @@ body.lightbox-open .topbar,
 body.lightbox-open .progress-rail {
   filter: blur(4px);
   transition: filter 300ms ease;
-}
-
-body::after {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-  opacity: 0.05;
-  background-image: repeating-linear-gradient(0deg, #fff 0 1px, transparent 1px 5px);
-  mix-blend-mode: overlay;
 }
 
 img {
@@ -118,8 +105,8 @@ figure {
   height: 100%;
   transform: scaleX(0);
   transform-origin: left center;
-  background: linear-gradient(90deg, rgba(197, 122, 85, 0.42), var(--accent));
-  box-shadow: 0 0 12px rgba(197, 122, 85, 0.28);
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.42), var(--accent));
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.28);
 }
 
 .topbar {
@@ -190,13 +177,13 @@ figure {
 }
 
 .progress-rail::before {
-  background: rgba(197, 122, 85, 0.2);
+  background: rgba(0, 0, 0, 0.2);
 }
 
 .progress-rail::after {
   transform: translateX(-50%) scaleY(var(--page-progress));
   transform-origin: top center;
-  background: linear-gradient(var(--accent), rgba(197, 122, 85, 0.12));
+  background: linear-gradient(var(--accent), rgba(0, 0, 0, 0.12));
 }
 
 .progress-rail a {
@@ -219,7 +206,7 @@ figure {
   height: 28px;
   background: var(--accent);
   border-color: var(--accent);
-  box-shadow: 0 0 18px rgba(197, 122, 85, 0.42);
+  box-shadow: 0 0 18px rgba(0, 0, 0, 0.42);
 }
 
 .progress-rail a::after {
@@ -228,7 +215,7 @@ figure {
   right: 20px;
   top: 50%;
   padding: 4px 8px;
-  border: 1px solid rgba(197, 122, 85, 0.3);
+  border: 1px solid rgba(0, 0, 0, 0.3);
   border-radius: 999px;
   color: var(--muted);
   background: rgba(17, 16, 14, 0.72);
@@ -443,7 +430,7 @@ p {
   background: radial-gradient(
     circle at var(--glow-x) var(--glow-y),
     rgba(255, 240, 220, 0.16),
-    rgba(197, 122, 85, 0.06) 24%,
+    rgba(0, 0, 0, 0.06) 24%,
     transparent 50%
   );
   mix-blend-mode: screen;
@@ -553,7 +540,7 @@ p {
 .spec-card:hover,
 .scenario-card:hover {
   transform: translateY(-5px);
-  border-color: rgba(197, 122, 85, 0.88);
+  border-color: rgba(0, 0, 0, 0.88);
   background: rgba(45, 36, 30, 0.82);
 }
 
@@ -621,7 +608,7 @@ p {
   gap: var(--space-5);
   margin-top: var(--space-5);
   padding: var(--space-5);
-  border: 1px solid rgba(197, 122, 85, 0.34);
+  border: 1px solid rgba(0, 0, 0, 0.34);
   border-left: 4px solid var(--accent);
   border-radius: var(--radius-sm);
   background: rgba(244, 239, 230, 0.045);
@@ -647,7 +634,7 @@ p {
   border: 1px solid var(--line);
   border-left: 4px solid var(--accent);
   color: var(--text);
-  background: rgba(197, 122, 85, 0.08);
+  background: rgba(0, 0, 0, 0.08);
 }
 
 .design-key span {
@@ -674,13 +661,13 @@ p {
   top: 0;
   bottom: 0;
   width: 1px;
-  background: rgba(197, 122, 85, 0.18);
+  background: rgba(0, 0, 0, 0.18);
 }
 
 .process-timeline::after {
   transform: scaleY(var(--timeline-progress));
   transform-origin: top center;
-  background: linear-gradient(var(--accent), rgba(197, 122, 85, 0.08));
+  background: linear-gradient(var(--accent), rgba(0, 0, 0, 0.08));
   transition: transform 880ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -707,7 +694,7 @@ p {
   z-index: 2;
   width: 13px;
   height: 13px;
-  border: 1px solid rgba(197, 122, 85, 0.52);
+  border: 1px solid rgba(0, 0, 0, 0.52);
   border-radius: 50%;
   background: var(--bg);
   transform: translateY(-50%);
@@ -719,7 +706,7 @@ p {
 
 .process-step.is-active {
   opacity: 1;
-  border-color: rgba(197, 122, 85, 0.72);
+  border-color: rgba(0, 0, 0, 0.72);
 }
 
 .no-js .process-timeline::after {
@@ -733,7 +720,7 @@ p {
 .process-step.is-active::before {
   background: var(--accent);
   border-color: var(--accent);
-  box-shadow: 0 0 18px rgba(197, 122, 85, 0.34);
+  box-shadow: 0 0 18px rgba(0, 0, 0, 0.34);
 }
 
 .process-step.is-active .step-index {
@@ -741,7 +728,7 @@ p {
 }
 
 .process-step.is-active .process-image {
-  border-color: rgba(197, 122, 85, 0.74);
+  border-color: rgba(0, 0, 0, 0.74);
   box-shadow: 0 26px 72px rgba(0, 0, 0, 0.38);
 }
 
@@ -819,14 +806,14 @@ p {
 }
 
 .hotspot::before {
-  border: 1px solid rgba(197, 122, 85, 0.82);
+  border: 1px solid rgba(0, 0, 0, 0.82);
   animation: hotspotPulse 2400ms ease-in-out infinite;
 }
 
 .hotspot::after {
   inset: 11px;
   background: var(--accent);
-  box-shadow: 0 0 18px rgba(197, 122, 85, 0.34);
+  box-shadow: 0 0 18px rgba(0, 0, 0, 0.34);
 }
 
 .hotspot-number {
@@ -898,7 +885,7 @@ p {
 }
 
 .detail-visual:hover + .callout-grid .callout-card {
-  border-color: rgba(197, 122, 85, 0.86);
+  border-color: rgba(0, 0, 0, 0.86);
 }
 
 .design-detail-grid {
@@ -977,7 +964,7 @@ p {
   position: relative;
   min-height: 260px;
   overflow: hidden;
-  border: 1px solid rgba(197, 122, 85, 0.34);
+  border: 1px solid rgba(0, 0, 0, 0.34);
   border-radius: var(--radius-sm);
   background:
     linear-gradient(rgba(244, 239, 230, 0.04) 1px, transparent 1px),
@@ -1029,7 +1016,7 @@ p {
   border-radius: 50%;
   background: rgba(13, 18, 22, 0.9);
   box-shadow:
-    inset 0 0 0 13px rgba(197, 122, 85, 0.26),
+    inset 0 0 0 13px rgba(0, 0, 0, 0.26),
     0 0 0 10px rgba(244, 239, 230, 0.08);
 }
 
@@ -1097,7 +1084,7 @@ p {
 
 .dimension-callout {
   padding: 7px 10px;
-  border: 1px solid rgba(197, 122, 85, 0.48);
+  border: 1px solid rgba(0, 0, 0, 0.48);
   border-radius: 999px;
   background: rgba(17, 16, 14, 0.72);
 }
@@ -1121,7 +1108,7 @@ p {
   bottom: 15%;
   width: 58%;
   padding-top: 8px;
-  border-top: 1px solid rgba(197, 122, 85, 0.62);
+  border-top: 1px solid rgba(0, 0, 0, 0.62);
   text-align: center;
 }
 
@@ -1132,7 +1119,7 @@ p {
   top: -5px;
   width: 1px;
   height: 10px;
-  background: rgba(197, 122, 85, 0.72);
+  background: rgba(0, 0, 0, 0.72);
 }
 
 .width-scale::before {
@@ -1148,7 +1135,7 @@ p {
   top: 37%;
   height: 30%;
   padding-right: 8px;
-  border-right: 1px solid rgba(197, 122, 85, 0.62);
+  border-right: 1px solid rgba(0, 0, 0, 0.62);
   writing-mode: vertical-rl;
   text-align: center;
 }
@@ -1160,7 +1147,7 @@ p {
   right: -5px;
   width: 10px;
   height: 1px;
-  background: rgba(197, 122, 85, 0.72);
+  background: rgba(0, 0, 0, 0.72);
 }
 
 .height-scale::before {
@@ -1181,7 +1168,7 @@ p {
 .dimension-metrics div {
   min-width: 0;
   padding: var(--space-3);
-  border: 1px solid rgba(197, 122, 85, 0.24);
+  border: 1px solid rgba(0, 0, 0, 0.24);
   border-radius: var(--radius-sm);
   background: rgba(244, 239, 230, 0.035);
 }
@@ -1557,7 +1544,7 @@ p {
 }
 
 .lightbox button:hover {
-  border-color: rgba(197, 122, 85, 0.8);
+  border-color: rgba(0, 0, 0, 0.8);
   background: rgba(33, 27, 23, 0.94);
   transform: translateY(-2px);
 }
@@ -1594,7 +1581,7 @@ p {
 
 @media (hover: hover) and (pointer: fine) and (min-width: 1041px) {
   .product-frame.is-tilting {
-    border-color: rgba(197, 122, 85, 0.72);
+    border-color: rgba(0, 0, 0, 0.72);
     box-shadow: 0 28px 82px rgba(0, 0, 0, 0.4);
     transform: perspective(1100px) rotateX(var(--tilt-x)) rotateY(var(--tilt-y)) translateY(-2px);
   }
@@ -1672,7 +1659,7 @@ p {
     width: 100%;
     height: auto;
     padding: var(--space-3);
-    border: 1px solid rgba(197, 122, 85, 0.24);
+    border: 1px solid rgba(0, 0, 0, 0.24);
     border-radius: var(--radius-sm);
     color: #4e443d;
     background: rgba(255, 255, 255, 0.38);
@@ -1691,7 +1678,7 @@ p {
     place-items: center;
     width: 30px;
     height: 30px;
-    border: 1px solid rgba(197, 122, 85, 0.58);
+    border: 1px solid rgba(0, 0, 0, 0.58);
     border-radius: 50%;
     color: var(--accent);
     opacity: 1;
@@ -1869,7 +1856,7 @@ p {
     width: 100%;
     height: auto;
     padding: var(--space-3);
-    border: 1px solid rgba(197, 122, 85, 0.24);
+    border: 1px solid rgba(0, 0, 0, 0.24);
     border-radius: var(--radius-sm);
     color: #4e443d;
     background: rgba(255, 255, 255, 0.38);
@@ -1888,7 +1875,7 @@ p {
     place-items: center;
     width: 30px;
     height: 30px;
-    border: 1px solid rgba(197, 122, 85, 0.58);
+    border: 1px solid rgba(0, 0, 0, 0.58);
     border-radius: 50%;
     color: var(--accent);
     opacity: 1;
